@@ -33,6 +33,3 @@ anime.timeline({loop: true})
 
 
 
-  function downloadResume() {
-    window.open("assets/Ibrahim_Sanna_resume.pdf")
- }
