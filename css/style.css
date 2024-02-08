@@ -26,14 +26,7 @@ body{
    -moz-box-shadow: 6px 6px 11px 4.5px #c9c9c9;
    box-shadow: 6px 6px 11px 4.5px #c9c9c9;
  }
-/*
- .colum {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   height: calc(100dvh - 61px);
- }
-*/
+
  .row_{
    display: flex;
    flex-wrap: wrap;
@@ -195,6 +188,10 @@ body{
    color: rgb(9, 9, 110);
  }
 
+ .nav-link.active {
+   border-bottom: solid black 2px;
+ }
+
  /*desktop*/
  @media (min-width: 992px) {
    .offcanvas-body > img {
@@ -275,9 +272,13 @@ body{
       padding: 20px 20px 20px 20px;
     }
     
+    .nav-link.active {
+      border-bottom: none;
+    }
 
  }
 
+ /*smaller mobiles*/
  @media (max-width: 320px) {
    .ml11 {
       font-size: 1.3em;
