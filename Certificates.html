@@ -14,8 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
        
 
@@ -42,10 +41,10 @@
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
                 <li class="nav-item">
-                  <a class="nav-link  active" href=""  aria-current="page">About</a>
+                  <a class="nav-link" href="About.html" >About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Portfolio.html">Portfolio</a>
+                  <a class="nav-link active" href="" aria-current="page">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Certificates.html">Certificates</a>
@@ -56,6 +55,125 @@
         </div>
     </nav>
 
-    
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="main">
+      <span class="heading">My Portfolio</span>
+      <div class="normalRow">
+
+        <div class="carodiv">
+          
+          <div class="carousell imgCaro" data-carousell>
+            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span>CSPD</span></a>
+            <button class="carousell-button prev" data-carousell-button="prev"><i
+                class="bi bi-caret-left-fill"></i></button>
+            <button class="carousell-button next" data-carousell-button="next"><i
+                class="bi bi-caret-right-fill"></i></button>
+                <ol class="carousel-indicators" data-indicators>
+                  <li data-target="#myCarousel" data-slide-to="0" data-active></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            <ul data-sllides>
+              <li class="sllide" data-active>
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="home page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilRegister.png" alt="products page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="cart page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="signin">
+            </ul>
+          </div>
+        </div>
+
+        <div class="carodiv">
+          <div class="carousell imgCaro" data-carousell>
+            <button class="carousell-button prev" data-carousell-button="prev"><i
+                class="bi bi-caret-left-fill"></i></button>
+            <button class="carousell-button next" data-carousell-button="next"><i
+                class="bi bi-caret-right-fill"></i></button>
+                <ol class="carousel-indicators" data-indicators>
+                  <li data-target="#myCarousel" data-slide-to="0" data-active></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            <ul data-sllides>
+              <li class="sllide" data-active>
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="home page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilRegister.png" alt="products page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="cart page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="signin">
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="normalRow">
+
+        <div class="carodiv">
+          <div class="carousell imgCaro" data-carousell>
+            <button class="carousell-button prev" data-carousell-button="prev"><i
+                class="bi bi-caret-left-fill"></i></button>
+            <button class="carousell-button next" data-carousell-button="next"><i
+                class="bi bi-caret-right-fill"></i></button>
+                <ol class="carousel-indicators" data-indicators>
+                  <li data-target="#myCarousel" data-slide-to="0" data-active></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+            <ul data-sllides>
+              <li class="sllide" data-active>
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="home page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilRegister.png" alt="products page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="cart page">
+              </li>
+              <li class="sllide">
+                <img src="assets/CivilStatusandPassportsDepartment.png" alt="signin">
+            </ul>
+          </div>
+        </div>
+
+
+        
+      </div>
+      
+    </div>
+    <script src="carousel.js"></script>
 </body>
 </html>

@@ -204,7 +204,7 @@ body{
   margin-inline: auto;
   margin-top: 50px;
   width: fit-content;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 600;
   background-image: linear-gradient(45deg , rgb(9, 9, 110), #000000);
   color: transparent;
@@ -217,48 +217,25 @@ body{
   flex-direction: row;
   width: fit-content;
   height: fit-content;
+  align-items: center;
   margin-top: 50px;
  }
 
- .reverseRow {
-  display: flex;
-  flex-direction: row-reverse;
-  width: fit-content;
-  height: fit-content;
-  margin-top: 50px;
+ .carodiv {
+   margin-inline: 20px;
  }
-
- .normalRow .carodiv {
-   margin-right: -20px;
- }
-
- .reverseRow .descriptiondiv {
-  margin-right: -20px;
-  padding: 20px 30px 20px 20px;
- 
-}
 
 .normalRow .descriptiondiv {
   padding: 20px 20px 20px 30px;
 }
 
-.descriptiondiv, .carodiv{
-
-  border-radius: 10px;
- }
-
- .descriptiondiv {
-  width: 350px;
-  height: 325px;
-  background-color: #f8f9fa;
- }
  .carodiv {
   background-color: gainsboro;
-  z-index: 3;
-  padding: 20px;
   width: auto;
   height: 325px;
+  border-radius: 10px;
   aspect-ratio: 16/9;
+  position: relative;
  }
 
  .projTitle {
@@ -334,6 +311,7 @@ body{
   background-color: rgba(37, 37, 37, 0.3);
   width: 40px;
   transition: background-color 200ms;
+  display: none;
 }
 
 .carousell-button:hover,
@@ -365,12 +343,6 @@ body{
   color: rgb(0, 156, 218);
 }
 
-.vidCaro .carousell-button {
-  top: 50%;
-  transform: translateY(-50%);
-  height: 55px;
-}
-
 .carousel-indicators > li {
   opacity: 0.5;
   transition: 300ms all ease-in-out;
@@ -378,7 +350,8 @@ body{
   height: 10px;
   border: transparent solid 1px;
   border-radius: 100%;
-  background-color: rgba(0, 156, 218, 0.65);
+  background-color: gray;
+  cursor: default;
 }
 
 
@@ -388,6 +361,38 @@ body{
 }
 
  /****/
+
+ .carodiv a {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: rgba(9, 9, 110, 0.75);
+  opacity: 0;
+  z-index: 5;
+  transition: all 200ms ease-in;
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 300;
+ }
+
+ .carodiv a:hover {
+  opacity: 1;
+  cursor: pointer;
+ }
+
+ .carodiv a span {
+  display: block;
+  margin-inline: auto;
+ }
+
+ .carodiv * {
+  border-radius: 10px;
+ }
 
 
  /*desktop*/
@@ -476,39 +481,22 @@ body{
 
     .normalRow {
       flex-direction: column;
-      margin-top: 50px;
-     }
-    
-     .reverseRow {
-      flex-direction: column;
-      margin-top: 50px;
+      margin-top: 0px;
      }
     
      .normalRow .carodiv {
-       margin-right: 0px;
+       margin-inline: 0px;
+       margin-top: 50px;
      }
     
-     .reverseRow .descriptiondiv,.normalRow .descriptiondiv {
-      margin-right: 0px;
-      margin-top: -20px;
-    }
-
      .carodiv {
-      z-index: 3;
       width: 95dvw;
       height: auto;
       aspect-ratio: 16/9;
      }
 
-     .descriptiondiv, .carodiv{
-      padding: 10px;
+     .carodiv{
       border-radius: 10px;
-     }
-
-     .descriptiondiv {
-      width: 95dvw;
-      height: 300px;
-      padding-top: 30px;
      }
 
      .carousel-item img{
@@ -516,6 +504,19 @@ body{
       height: auto;
       aspect-ratio: 16/9;
     }
+
+    .heading {
+      display: block;
+      margin-inline: auto;
+      margin-top: 50px;
+      width: fit-content;
+      font-size: 45px;
+      font-weight: 600;
+      background-image: linear-gradient(45deg , rgb(9, 9, 110), #000000);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+     }
 
  }
 

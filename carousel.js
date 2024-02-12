@@ -26,48 +26,36 @@ buttons.forEach(button => {
   })
 })
 
-//const btnAuto = document.querySelectorAll(".imgCaro>.carousell-button");
-/*
+const caros = document.querySelectorAll("[data-carousell]");
+
 autoSlide();
 
 
 
 function autoSlide() {
     const offset = 1
-    const sllides = btnAuto[0].closest("[data-carousell]")
+
+    caros.forEach(caro => {
+      const sllides = caro
       .querySelector("[data-sllides]")
 
+      const indicators = caro
+      .querySelector("[data-indicators]")
+
     const activeSllide = sllides.querySelector("[data-active]")
+    const activeIndicator = indicators.querySelector("[data-active]")
     let newIndex = [...sllides.children].indexOf(activeSllide) + offset
     if (newIndex >= sllides.children.length) newIndex = 0
 
     sllides.children[newIndex].dataset.active = true
+    indicators.children[newIndex].dataset.active = true
+    delete activeIndicator.dataset.active
     delete activeSllide.dataset.active
+    });
+    
 
     setTimeout(autoSlide, 5000);
   }
 
-const btnVid = document.querySelectorAll(".vidCaro>.carousell-button");
 
-btnVid.forEach(button => {
-  button.addEventListener("click", () => {
-    const sllides = button.closest("[data-carousell]")
-      .querySelector("[data-sllides]")
-
-    const offset = button.dataset.carousellButton === "next" ? -1 : 1
-
-    const activeSllide = sllides.querySelector("[data-active]")
-    let index = [...sllides.children].indexOf(activeSllide)
-
-    let vids = document.querySelectorAll(".vidCaro video")
-    if((index+offset)<0||(index+offset)>sllides.children.length - 1){
-    vids[0].pause()
-    vids[sllides.children.length - 1].pause()
-    }
-    else{
-    vids[index+offset].pause()
-    }
-    vids[index].play()
-  })
-})*/
 //end carousel
