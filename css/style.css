@@ -195,14 +195,14 @@ body{
 
  .main {
   margin-inline: auto;
-  width: fit-content;
-  padding-bottom: 50px;
+  width: 95dvw;
  }
 
  .heading {
   display: block;
   margin-inline: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   width: fit-content;
   font-size: 55px;
   font-weight: 600;
@@ -215,24 +215,23 @@ body{
  .normalRow {
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  flex-wrap: wrap;
+  width: 100%;
   height: fit-content;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
  }
 
- .carodiv {
+ .carodiv, .projdiv {
    margin-inline: 20px;
+   margin-bottom: 50px;
  }
 
-.normalRow .descriptiondiv {
-  padding: 20px 20px 20px 30px;
-}
 
- .carodiv {
+ .carodiv, .projdiv{
   background-color: gainsboro;
-  width: auto;
-  height: 325px;
+  width: 400px;
+  height: auto;
   border-radius: 10px;
   aspect-ratio: 16/9;
   position: relative;
@@ -250,6 +249,11 @@ body{
   font-weight: 250;
   font-family: 'Raleway',Arial, Helvetica, sans-serif;
   color: rgb(9, 9, 110);
+ }
+
+ .projdiv img {
+  aspect-ratio: 16/9;
+  width: 100%;
  }
 
  /*****/
@@ -278,7 +282,7 @@ body{
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: 300ms opacity ease-in-out;
+  transition: 400ms opacity ease-in-out;
 }
 
 .sllide > * {
@@ -362,38 +366,57 @@ body{
 
  /****/
 
- .carodiv a {
+ .carodiv a, .projdiv a {
   display: flex;
   align-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
   aspect-ratio: 16/9;
-  background-color: rgba(9, 9, 110, 0.75);
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
   opacity: 0;
   z-index: 5;
-  transition: all 200ms ease-in;
+  transition: all 300ms ease-in;
   text-align: center;
   text-decoration: none;
-  color: whitesmoke;
-  font-size: 30px;
-  font-weight: 300;
+  color: black;
+  font-size: 25px;
+  border-radius: 9px;
  }
 
- .carodiv a:hover {
+ .carodiv a:hover, .projdiv a:hover{
   opacity: 1;
   cursor: pointer;
  }
 
- .carodiv a span {
+ .carodiv a span, .projdiv a span{
+  font-weight: bold;
   display: block;
   margin-inline: auto;
+  position: relative;
+  bottom: 20px;
+  opacity: 0;
+  transition: all 300ms;
  }
 
- .carodiv * {
+ .carodiv a:hover span, .projdiv a:hover span {
+  opacity: 1;
+  bottom: 0px;
+ }
+
+ .carodiv *, .projdiv *{
   border-radius: 10px;
  }
 
+
+ .modal-body .carodiv {
+  width: 98%;
+  height: auto;
+  margin-inline: auto;
+ }
 
  /*desktop*/
  @media (min-width: 992px) {
@@ -488,9 +511,13 @@ body{
        margin-inline: 0px;
        margin-top: 50px;
      }
+
+     .main {
+      width: 95dvw;
+     }
     
      .carodiv {
-      width: 95dvw;
+      width: 90dvw;
       height: auto;
       aspect-ratio: 16/9;
      }
