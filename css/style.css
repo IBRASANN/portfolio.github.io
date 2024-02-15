@@ -222,38 +222,40 @@ body{
   align-items: center;
  }
 
- .carodiv, .projdiv {
-   margin-inline: 20px;
-   margin-bottom: 50px;
- }
-
-
  .carodiv, .projdiv{
+  margin-inline: 20px;
+  margin-bottom: 50px;
   background-color: gainsboro;
-  width: 400px;
+  width: 425px;
   height: auto;
   border-radius: 10px;
   aspect-ratio: 16/9;
   position: relative;
  }
 
+ .certificate {
+  aspect-ratio: 22/17;
+ }
+
  .projTitle {
   font-size: 25px;
-  font-weight: 250;
   font-family: 'Raleway',Arial, Helvetica, sans-serif;
-  color: rgb(9, 9, 110);
+  color: rgb(6, 6, 70);
  }
 
  .subTitle {
-  font-size: 20px;
-  font-weight: 250;
+  font-size: 18px;
   font-family: 'Raleway',Arial, Helvetica, sans-serif;
-  color: rgb(9, 9, 110);
+  color: rgb(6, 6, 70);
  }
 
  .projdiv img {
   aspect-ratio: 16/9;
   width: 100%;
+ }
+
+ .certificate img {
+  aspect-ratio: 22/17;
  }
 
  /*****/
@@ -366,7 +368,7 @@ body{
 
  /****/
 
- .carodiv a, .projdiv a {
+ .projdiv a {
   display: flex;
   align-items: center;
   position: absolute;
@@ -387,12 +389,12 @@ body{
   border-radius: 9px;
  }
 
- .carodiv a:hover, .projdiv a:hover{
+ .projdiv a:hover{
   opacity: 1;
   cursor: pointer;
  }
 
- .carodiv a span, .projdiv a span{
+ .projdiv a span{
   font-weight: bold;
   display: block;
   margin-inline: auto;
@@ -402,7 +404,7 @@ body{
   transition: all 300ms;
  }
 
- .carodiv a:hover span, .projdiv a:hover span {
+ .projdiv a:hover span {
   opacity: 1;
   bottom: 0px;
  }
@@ -416,6 +418,16 @@ body{
   width: 98%;
   height: auto;
   margin-inline: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+ }
+
+ .modal-body .certificate {
+  width: 98%;
+  height: auto;
+  margin-inline: auto;
+  margin-top: auto;
+  margin-bottom: auto;
  }
 
  /*desktop*/
@@ -507,22 +519,20 @@ body{
       margin-top: 0px;
      }
     
-     .normalRow .carodiv {
-       margin-inline: 0px;
-       margin-top: 50px;
-     }
+
 
      .main {
       width: 95dvw;
      }
     
-     .carodiv {
+     .carodiv, .projdiv {
+      margin-inline: 0px;
       width: 90dvw;
       height: auto;
       aspect-ratio: 16/9;
      }
 
-     .carodiv{
+     .carodiv, .projdiv{
       border-radius: 10px;
      }
 
@@ -544,6 +554,10 @@ body{
       background-clip: text;
       -webkit-background-clip: text;
      }
+
+     .letswork ul {
+      padding: 15px 0px;
+    }
 
  }
 
