@@ -1,4 +1,5 @@
 //carousel
+/*
 const buttons = document.querySelectorAll("[data-carousell-button]")
 
 buttons.forEach(button => {
@@ -25,7 +26,7 @@ buttons.forEach(button => {
     delete activeSllide.dataset.active
   })
 })
-
+*/
 const caros = document.querySelectorAll("[data-carousell]");
 
 autoSlide();
