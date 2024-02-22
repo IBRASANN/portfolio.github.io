@@ -165,14 +165,14 @@ body{
    width: fit-content;
  }
 
- .letswork ul {
+ .letswork ul, .personalInfo ul {
    list-style: none;
    margin: 0;
    padding: 10px 0px;
    text-align: center;
  }
 
- .letswork ul li{
+ .letswork ul li, .personalInfo ul li{
    display: inline-block;
    padding-inline: 10px;
  }
@@ -433,6 +433,155 @@ body{
   margin-bottom: auto;
  }
 
+ .aboutMain {
+  max-width: 1200px;
+  padding-inline: 20px;
+  margin-inline: auto;
+ }
+
+ .personalInfo {
+  text-align: left;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  font-size: 1.1em;
+  margin-bottom: 50px;
+ }
+ .personalInfo .subTitle{
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+ }
+
+ .personalInfo ul {
+  text-align: left;
+  padding-top: 10px;
+ }
+
+ .personalInfo p {
+  text-align: left;
+  padding-top: 20px;
+ }
+
+ .lite {
+  opacity: 0.9;
+ }
+
+ .skills {
+  text-align: center;
+  background-color: inherit;
+  padding: 0;
+ }
+
+ .skills > .subTitle {
+  margin-bottom: 30px;
+ }
+ 
+.skill, .lang{
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+  border-radius: 10px;
+}
+
+.skill {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.lang {
+  display: block;
+  margin-inline: auto;
+}
+
+ .skill iconify-icon {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: 1.8em;
+ }
+
+ .skill span,.lang span {
+  font-size: 1.1em;
+ }
+
+ .flex_container_center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
+ }
+
+ .flex_item {
+  flex: 25%;
+ }
+
+ .skills.personalInfo > div {
+  width: fit-content;
+  margin-inline: auto;
+ }
+
+
+ /******************pie chart******************/
+ @property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.pie {
+  --p:20;
+  --b:22px;
+  --c:darkred;
+  --w:125px;
+  
+  width:var(--w);
+  aspect-ratio:1;
+  position:relative;
+  display:inline-grid;
+  margin:5px;
+  place-content:center;
+  font-size:25px;
+  font-weight:bold;
+  font-family:sans-serif;
+}
+.pie:before,
+.pie:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.pie:before {
+  inset:0;
+  background:
+    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+  inset:calc(50% - var(--b)/2);
+  background:var(--c);
+  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+.animate {
+  animation:p 1s .5s both;
+}
+.no-round:before {
+  background-size:0 0,auto;
+}
+.no-round:after {
+  content:none;
+}
+@keyframes p {
+  from{--p:0}
+}
+/******************pie chart end******************/
+
  /*desktop*/
  @media (min-width: 992px) {
    .offcanvas-body > img {
@@ -562,6 +711,36 @@ body{
       padding: 15px 0px;
     }
 
+     .personalInfo {
+      font-size: 1.0em;
+     }
+
+     .skill {
+      display: inline-block;
+      width: fit-content;
+      margin-left: 15px;
+      margin-bottom: 15px;
+      padding: 15px;
+      text-align: center;
+      background-color: #dddddd;
+      border-radius: 10px;
+    }
+
+    .lang {
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+    
+     .skill iconify-icon {
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+      font-size: 1.6em;
+     }
+    
+     .skill span, .lang span{
+      font-size: 1.0em;
+     }
  }
 
  /*smaller mobiles*/
@@ -586,4 +765,17 @@ body{
     .portrate > img {
       max-width: 278px;
     }
+ }
+
+ /*for programming langs flex*/
+ @media (max-width: 745px) {
+  .flex_item {
+    flex: 33.333333%;
+   }
+ }
+
+ @media (max-width: 595px) {
+  .flex_item {
+    flex: 50%;
+   }
  }
