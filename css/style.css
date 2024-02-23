@@ -446,6 +446,7 @@ body{
   border-radius: 15px;
   font-size: 1.1em;
   margin-bottom: 50px;
+  
  }
  .personalInfo .subTitle{
   display: block;
@@ -741,6 +742,10 @@ body{
      .skill span, .lang span{
       font-size: 1.0em;
      }
+
+     .pie {
+      font-size:22px;
+    }
  }
 
  /*smaller mobiles*/
@@ -765,6 +770,33 @@ body{
     .portrate > img {
       max-width: 278px;
     }
+ }
+
+ @media (max-width: 420px) {
+  .lang {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .pie {
+    --w:110px;
+    
+    width:var(--w);
+  }
+
+ }
+
+ @media (max-width: 345px) {
+  .lang {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .pie {
+    --w:95px;
+    font-size:18px;
+  }
+
  }
 
  /*for programming langs flex*/
